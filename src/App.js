@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Filter from './Component/Filter/Filter';
+import { Divider } from 'antd';
+import TodoList from './Component/TodoList/TodoList';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="w-[500px] h-[90vh] p-4 mx-[auto] my-9 flex flex-col bg-white shadow-shadowWhite ">
+            <h1 className=" uppercase text-[38px] mb-[19px] font-semibold text-center">
+                {' '}
+                todo app with redux
+            </h1>
+            <Filter />
+            <Divider />
+            <TodoList />
+        </div>
+    );
 }
 
 export default App;
